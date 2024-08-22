@@ -1,0 +1,17 @@
+{% extends 'encabezado.html' %}
+{% block content %}
+<div style="margin-top: 60px; display: flex; flex-wrap: wrap;">
+    {% for video in videos %}
+    <div style="width: 23%; padding: 10px;">
+        <a href="{% url 'pepetube:detalle_video' video.pk %}">
+            <img class="imagen" src="{{ video.archivo_imagen.url }}" width="300px" height="170px" />
+            <p>{{ video.titulo }}</p>
+            <p style="font-family: Arial; font-size: 12px;">Subido por {{ video.usuario }}</p>
+            <p style="font-family: Arial; font-size: 12px;">{{video.fecha|date:"d-m-Y"}}</p>
+        </a>
+    </div>
+    {% empty %}
+    <p class="titulo">No hay videos disponibles.</p>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepetube</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+</head>
+<body>
+    <div style="padding-bottom: 10px;padding-top: 10px;">
+
+        <a href="{% url 'pepetube:lista_videos' %}">
+        <img class="icono" src="{% static 'img/icon.png' %}" alt="Icono" width="30px"/>
+        <h1 style="float: left;">PepeTube</h1>
+        </a>
+
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'pepetube:profile' %}">
+        <p style="margin: 0; padding: 0;float: right;margin-right: 30px;margin-top: 10px;">
+        {{ request.user.username }}
+        </p>
+        </a>
+        {% else %}
+        <a href="{% url 'pepetube:login' %}" style="float: right;">
+        <img style="margin-right: 30px;margin-top: 10px;" class="login" src="{% static 'img/user.png' %}" width="30px"/>
+        </a>
+        {% endif %}
+        <a href="{% url 'pepetube:crear_video' %}" style="float: right;">
+        <img class="subir" src="{% static 'img/subir.png' %}" width="30px" />
+        </a>
+
+        <form class="buscador" method="GET" action="{% url 'pepetube:buscar_videos' %}">
+            <input type="text" name="query" placeholder="Buscar..." autocomplete="off">
+            <button type="submit">Buscar</button>
+        </form>
+
+    </div>
+    <hr style="border-color: rgb(0, 0, 0);" >
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

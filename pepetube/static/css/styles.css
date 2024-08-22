@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'LeagueCondensed';
+    src: url('../fonts/LeagueGothic-Condensed.otf') format('truetype');
+}
+@font-face {
+    font-family: 'League';
+    src: url('../fonts/LeagueGothic-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gothic';
+    src: url('../fonts/Alternate\ Gothic\ No2\ D\ Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Araboto';
+    src: url('../fonts/Araboto\ Black\ 400.ttf') format('truetype');
+}
+html{
+    scrollbar-width: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+h1{
+    font-family: "Gothic";
+    margin: 0;
+    padding: 0;
+    padding-top: 14px;
+    font-size: 26px;
+}
+.icono{
+    float: left;
+    padding-top: 17px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.buscador{
+    margin: 0 auto;
+    text-align: center;
+}
+.buscador input{
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 25%;
+    margin-top: 5px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;    
+    color: white;
+    background-color: rgb(20, 20, 20);
+    border: solid 1px gray;
+}
+.buscador button{
+    padding: 10px;
+    background-color: rgb(40,40,40);
+    border: solid 1px gray;
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.subir{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.titulo{
+    font-family: "Araboto";
+    padding: 0;
+    margin: 0;
+    margin-left: 30px;
+}
+.video{
+    margin: 30px;
+    margin-bottom: 0px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: black;
+}
+p{
+    font-family: "Araboto";
+    margin: 0;
+    padding: 0;
+}
+.imagen{
+    border-radius: 20px;
+}
+.login{
+    margin-right: 20px;
+    margin-top: 10px;
+}

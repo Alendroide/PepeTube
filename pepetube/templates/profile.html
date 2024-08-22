@@ -1,0 +1,8 @@
+{% extends 'encabezado.html' %}
+{% block content %}
+<h2 class="titulo">Tu perfil</h2>
+<br>
+<p class="titulo" style="margin-bottom: 40px;" >Nombre de usuario: {{ request.user.username }}</p>
+
+<a href="{% url 'pepetube:logout' %}"><p style="margin-left: 30px;padding: 10px;display: inline-block;background-color: rgb(60,60,60);border-radius: 30px;">Cerrar Sesión</p></a>
+{% endblock content %}

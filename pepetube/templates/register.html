@@ -1,0 +1,15 @@
+{% extends 'encabezado.html' %}
+{% block content %}
+<h2 class="titulo" style="margin-bottom: 20px;">Registro</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label class="titulo" for="id_username">Nombre de usuario:</label><br>
+        <input autocomplete="off" style="color:white;margin-top:10px;padding: 10px;border-radius: 20px;margin-left: 30px;background-color: rgb(30,30,30);border: solid 1px gray;margin-bottom: 30px;" type="text" id="id_username" name="username"><br>
+        <label class="titulo" for="id_password1">Contraseña:</label><br>
+        <input style="color:white;margin-top:10px;padding: 10px;border-radius: 20px;margin-left: 30px;background-color: rgb(30,30,30);border: solid 1px gray;margin-bottom: 30px;" type="password" id="id_password1" name="password1"><br>
+        <label class="titulo" for="id_password2">Confirmar contraseña:</label><br>
+        <input style="color:white;margin-top:10px;padding: 10px;border-radius: 20px;margin-left: 30px;background-color: rgb(30,30,30);border: solid 1px gray;margin-bottom: 30px;" type="password" id="id_password2" name="password2"><br><br>
+        <button style="margin-bottom:30px;padding: 10px;border: 1px solid gray;border-radius: 20px;background-color: rgb(30,30,30);color: white;margin-left: 30px;" type="submit">Registrarse</button>
+    </form>
+    <p class="titulo">Ya tienes una cuenta? <a href="{% url 'pepetube:login' %}" style="color: rgb(179, 179, 179);" >Inicia Sesión</a></p>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'encabezado.html' %}
+{% block content %}
+<h1 style="margin-left: 30px;margin-bottom: 20px;">Subir Video!</h1>
+
+<form class="subirvideo" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p style="margin-left:30px;">Titulo:</p>
+    <input type="text" id="{{ form.titulo.id_for_label }}" name="{{ form.titulo.html_name }}" style="padding: 10px;margin-left: 30px;border-radius: 20px;background-color: rgb(20,20,20);border: solid 1px gray;padding-right: 200px;color: white;" autocomplete="off"><br><br>
+    <input type="file" id="{{ form.archivo_video.id_for_label }}" name="{{ form.archivo_video.html_name }}" style="margin-left: 30px;border-radius: 20px;background-color: rgb(126, 126, 126);color: rgb(255, 255, 255);padding-right: 10px;margin-bottom: 30px;"><br>
+    <input type="file" id="{{ form.archivo_imagen.id_for_label }}" name="{{ form.archivo_imagen.html_name }}" style="margin-left: 30px;border-radius: 20px;background-color: rgb(126, 126, 126);color: rgb(255, 255, 255);padding-right: 10px;margin-bottom: 30px;"><br>
+    <button style="background-color: rgb(20,20,20);color: white;padding: 10px;border-radius: 20px;border: solid 1px gray;margin-left: 30px;" type="submit">Guardar</button>
+</form>
+
+{% endblock content %}

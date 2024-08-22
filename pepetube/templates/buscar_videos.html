@@ -1,0 +1,21 @@
+{% extends 'encabezado.html' %}
+{% block content %}
+    {% for video in videos %}
+    <div>
+    <table>
+    <tr>
+    <td>
+    <a href="{% url 'pepetube:detalle_video' video.pk %}">
+    <img class="imagen" style="float: left;margin: 30px;margin-top: 0px;" class="buscado" src="{{video.archivo_imagen.url}}" width="550px" height="310"/>    
+    <p style="margin-top: 40px;font-size: 25px;float: left;">{{ video.titulo }}</p>
+    <p>{{ video.usuario }}</p>
+    </a>
+    </td>
+    </tr>
+    </table>
+    </div>
+    {% empty %}
+    <h3 class="titulo">Ups, parece que no hay resultados!</h3>
+    {% endfor %}
+
+{% endblock content %}

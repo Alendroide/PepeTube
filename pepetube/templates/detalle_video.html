@@ -1,0 +1,10 @@
+{% extends 'encabezado.html' %}
+{% block content %}
+    <video class="video" width="710" height="400" controls>
+        <source src="{{ video.archivo_video.url }}" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+    <h1 class="titulo">{{ video.titulo }}</h1>
+    <h3 class="titulo"> {{video.usuario}} </h3>
+    <p class="titulo">Subido el {{video.fecha}}</p>
+{% endblock content %}
